@@ -2,32 +2,51 @@ import happy from "../assets/happy.png"
 import angry from "../assets/angry.png"
 import anxious from "../assets/anxious.png"
 import overwhelmed from "../assets/overwhelmed.png"
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
 const AddJournal = () =>{
-
-    const [feeling, setFeeling] = useState()
-    const name = "ElieSkye"
-
+    const name = "ElieSkye";
+    const [feeling, setFeeling] = useState("");
 
     return(
    <>
         <h1>Welcome,{name}</h1>
         <h3>How are you feeling?</h3>
-    
+    <section>
+        
         <img onClick={() => setFeeling("happy")} src={happy} alt="happiness emoji" className="emoji" />
         <img onClick={() => setFeeling("angry")} src={angry} alt="angry emoji" className="emoji" />
         <img onClick={() => setFeeling("anxious")} src={anxious} alt="anxious emoji" className="emoji" />
         <img onClick={() => setFeeling("overwhelmed")} src={overwhelmed} alt="overwhelmed emoji" className="emoji" />
+        {console.log(feeling)}
 
-        <h3>Want to talk to?</h3>
-
+       
+    </section>
+        <FormControl>
+            <FormLabel id="demo-row-radio-buttons-group-label">Want to talk about it?</FormLabel>
+            <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+      >
+        <FormControlLabel value="No" control={<Radio />} label="No" />
+        <FormControlLabel value="to HR" control={<Radio />} label="to HR" />
+        <FormControlLabel value="to Manager" control={<Radio />} label="to Manager" />
         
+      </RadioGroup>
+        </FormControl>
+        
+
+
+        {/* <Journal props={feeling} ></Journal> */}
     
 
-        {/* <button class="button button3">🤯</button>
-        <button class="button button4">😠</button> */} 
-
+       
 
 
     </>

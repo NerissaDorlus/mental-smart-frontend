@@ -10,7 +10,7 @@ const Journal = () => {
         .then((response) => response.json())
         .then((data) => setJournals(data))
         .catch(console.error);
-        console.log(journals)
+        
     }, []);
     const name = "Elie Skye"
     return(
