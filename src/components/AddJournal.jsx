@@ -1,7 +1,8 @@
 import happy from "../assets/happy.png"
-import angry from "../assets/angry.png"
-import anxious from "../assets/anxious.png"
 import overwhelmed from "../assets/overwhelmed.png"
+import sad from "../assets/sad.png"
+import anxious from "../assets/anxious.png"
+
 import { useState } from "react"
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -12,6 +13,7 @@ import FormLabel from '@mui/material/FormLabel';
 const AddJournal = () =>{
     const name = "ElieSkye";
     const [feeling, setFeeling] = useState("");
+    // const [willTalkTo, setWillTalkTo] = useState("")
 
     return(
    <>
@@ -20,7 +22,7 @@ const AddJournal = () =>{
     <section>
         
         <img onClick={() => setFeeling("happy")} src={happy} alt="happiness emoji" className="emoji" />
-        <img onClick={() => setFeeling("angry")} src={angry} alt="angry emoji" className="emoji" />
+        <img onClick={() =>  setFeeling("sad")} src={sad} alt="sad emoji" className="emoji" />
         <img onClick={() => setFeeling("anxious")} src={anxious} alt="anxious emoji" className="emoji" />
         <img onClick={() => setFeeling("overwhelmed")} src={overwhelmed} alt="overwhelmed emoji" className="emoji" />
         {console.log(feeling)}
@@ -33,7 +35,10 @@ const AddJournal = () =>{
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
+    
       >
+          {/* todo onChange button */}
+          
         <FormControlLabel value="No" control={<Radio />} label="No" />
         <FormControlLabel value="to HR" control={<Radio />} label="to HR" />
         <FormControlLabel value="to Manager" control={<Radio />} label="to Manager" />
