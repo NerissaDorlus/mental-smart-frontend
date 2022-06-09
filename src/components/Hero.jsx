@@ -1,10 +1,14 @@
+import React from "react"
 
 
 
 
-
-export default function Hero(){
+const Hero = () =>{
+    //Fake  data to be  removed
+    const name  =  "Elie-Skye"
     return (
-        <h1>Hello World</h1>
+        <h1>Welcome, {name}</h1>
     )
 }
+
+export default Hero;

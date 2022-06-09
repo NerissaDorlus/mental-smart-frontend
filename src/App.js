@@ -1,9 +1,9 @@
-import "./App.css";
+import "./styles/App.css";
 import React from "react";
 import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero";
 import Journal from "./components/Journal";
-import Footer from "./common/Footer";
+// import Footer from "./common/Footer";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import AddJournal from "./components/AddJournal";
