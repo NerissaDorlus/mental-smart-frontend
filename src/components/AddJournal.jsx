@@ -36,8 +36,7 @@ const AddJournal = () => {
   };
   return (
     <header>
-      <h>Welcome,{name}</h>
-      <header />
+      <h1>Welcome,{name}</h1>
       <h3>How are you feeling?</h3>
       <section>
         <img
