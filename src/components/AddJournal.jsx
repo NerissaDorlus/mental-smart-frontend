@@ -2,17 +2,16 @@ import happy from "../assets/happy.png";
 import overwhelmed from "../assets/overwhelmed.png";
 import sad from "../assets/sad.png";
 import anxious from "../assets/anxious.png";
-
+import Hero from "./Hero"
+import Footer from "../common/Footer"
 import { useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
-// import { Button } from "@mui/material";
 
 const AddJournal = () => {
-  const name = "ElieSkye";
 
   const [feeling, setFeeling] = useState("");
   const [willTalkTo, setWillTalkTo] = useState("");
@@ -35,8 +34,9 @@ const AddJournal = () => {
       .catch(console.error);
   };
   return (
-    <header>
-      <h1>Welcome,{name}</h1>
+    <>
+      <Hero />
+    
       <h3>How are you feeling?</h3>
       <section>
         <img
@@ -89,9 +89,11 @@ const AddJournal = () => {
         Submit Message
       </button>        
       </FormControl>
+      <Footer />
+      
 
       {/* <Journal props={feeling} ></Journal> */}
-    </header>
+    </>
   );
 };
 

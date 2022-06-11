@@ -6,18 +6,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import AddJournal from "./components/AddJournal";
-import TeamView from "./components/TeamView";
+// import TeamView from "./components/TeamView";
 
 function App() {
   return (
     <>
-    <AddJournal/>
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/journals" element={<AddJournal />} />
-        <Route path="/journals" element={<TeamView />} />
+        {/* <Route path="/journals" element={<TeamView />} /> */}
       </Routes>
     </BrowserRouter>
  </> 
