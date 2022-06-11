@@ -24,13 +24,17 @@ const AddJournal = () => {
       body: JSON.stringify({
         feeling,
         willTalkTo,
+        // inputedEmail: "email goes here"
       
       }),
       headers: {
         "Content-type": "application/json",
       },
     })
-      .then((res) => res.text())
+      .then((res) => {
+        setFeeling("")
+        setWillTalkTo("")
+      })
       .catch(console.error);
   };
   return (

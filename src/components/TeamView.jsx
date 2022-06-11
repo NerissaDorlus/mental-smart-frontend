@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import UserJournals from "./UserJournals";
 
 
 const TeamView = () => {
@@ -11,19 +12,15 @@ const TeamView = () => {
         .catch(console.error);
         
     }, []);
-    const name = "Elie Skye"
     return(
         <>
-           <h1>Hello, {name}</h1>
+           <h1>Team View</h1>
            {!journals ? (
                <h2>Loading Journals ...</h2>
            ):(
-               <h2>
-                {journals.map((journal) => {
-                    return <p key={journal}> {journal.date} {journal.feeling} {journal.willTalkTo} </p>
-
-                })}
-            </h2>
+               <div>
+                <UserJournals journals={journals} userEmail />
+            </div>
         
            )}
 
