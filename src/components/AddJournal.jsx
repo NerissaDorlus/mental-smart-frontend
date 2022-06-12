@@ -10,21 +10,23 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import { useNavigate } from "react-router-dom";
 
 const AddJournal = () => {
 
   const [feeling, setFeeling] = useState("");
   const [willTalkTo, setWillTalkTo] = useState("");
+  const navigate = useNavigate()
   const handleChange = (e) => {
     setWillTalkTo(e.target.value);
   };
   const handleSubmit = () => {
-    fetch("http://localhost:3030/journals", {
+    fetch("https://mental-smart.web.app/journals", {
       method: "POST",
       body: JSON.stringify({
         feeling,
         willTalkTo,
-        // inputedEmail: "email goes here"
+        // inputedEmail: "jane.pierre@gmail.com"
       
       }),
       headers: {
@@ -34,6 +36,7 @@ const AddJournal = () => {
       .then((res) => {
         setFeeling("")
         setWillTalkTo("")
+        navigate("/team")
       })
       .catch(console.error);
   };
@@ -90,7 +93,7 @@ const AddJournal = () => {
           {console.log(willTalkTo)}
         </RadioGroup>
         <button type="button" variant="contained" onClick={() => handleSubmit()}>
-        Submit Message
+        Submit Journal
       </button>        
       </FormControl>
       <Footer />

@@ -1,9 +1,17 @@
 const Journal = ({journal}) => {
-    return(
-        <h2>
-                <p key={journal}> {journal.date} {journal.feeling} {journal.willTalkTo} </p>
-            </h2>
-    )
+    const journalEmoji = {
+        anxious: "😬",
+        happy: "😃",
+        sad: "😔", 
+        overwhelmed: "🤯"
+
+    }
+    return (
+      <p key={journal.id}>
+        {" "}
+        {journal.entryDate} {journalEmoji[journal.feeling]}{" "}
+      </p>
+    );
 //display feeling and date
 
 }
