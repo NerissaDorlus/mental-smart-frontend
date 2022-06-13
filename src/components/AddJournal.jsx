@@ -26,7 +26,7 @@ const AddJournal = () => {
       body: JSON.stringify({
         feeling,
         willTalkTo,
-        // inputedEmail: "jane.pierre@gmail.com"
+        // inputedEmail: "email goes here"
       
       }),
       headers: {
@@ -43,36 +43,38 @@ const AddJournal = () => {
   return (
     <>
       <Hero />
-    
-      <h3>How are you feeling?</h3>
-      <section>
-        <img
-          onClick={() => setFeeling("happy")}
-          src={happy}
-          alt="happiness emoji"
-          className="emoji"
-        />
-        <img
-          onClick={() => setFeeling("sad")}
-          src={sad}
-          alt="sad emoji"
-          className="emoji"
-        />
-        <img
-          onClick={() => setFeeling("anxious")}
-          src={anxious}
-          alt="anxious emoji"
-          className="emoji"
-        />
-        <img
-          onClick={() => setFeeling("overwhelmed")}
-          src={overwhelmed}
-          alt="overwhelmed emoji"
-          className="emoji"
-        />
-        {console.log(feeling)}
-      </section>
-      <FormControl>
+
+      <section className="journalbody">
+        <h3>How are you feeling?</h3>
+        <div>
+          <img
+            onClick={() => setFeeling("happy")}
+            src={happy}
+            alt="happiness emoji"
+            className="emoji"
+          />
+          <img
+            onClick={() => setFeeling("sad")}
+            src={sad}
+            alt="sad emoji"
+            className="emoji"
+          />
+          <img
+            onClick={() => setFeeling("anxious")}
+            src={anxious}
+            alt="anxious emoji"
+            className="emoji"
+          />
+          <img
+            onClick={() => setFeeling("overwhelmed")}
+            src={overwhelmed}
+            alt="overwhelmed emoji"
+            className="emoji"
+          />
+          {console.log(feeling)}
+        </div> 
+
+        <FormControl>
         <FormLabel id="demo-row-radio-buttons-group-label">
           Want to talk about it?
         </FormLabel>
@@ -84,20 +86,25 @@ const AddJournal = () => {
           onChange={handleChange}
         >
           <FormControlLabel value="No" control={<Radio />} label="No" />
-          <FormControlLabel value="to HR" control={<Radio />} label="to HR" />
+          <FormControlLabel value="to HR" control={<Radio />} label="to Manager" />
           <FormControlLabel
-            value="to Manager"
+            value="to HR"
             control={<Radio />}
             label="to Manager"
           />
           {console.log(willTalkTo)}
         </RadioGroup>
-        <button type="button" variant="contained" onClick={() => handleSubmit()}>
-        Submit Journal
-      </button>        
-      </FormControl>
+        </FormControl> 
+        <button
+          type="button"
+          variant="contained"
+          onClick={() => handleSubmit()}
+        >
+          Submit Journal
+        </button>
+      </section>
+
       <Footer />
-      
 
       {/* <Journal props={feeling} ></Journal> */}
     </>
