@@ -1,11 +1,17 @@
 img{
   /* border:solid 1px red;  */
-  justify-content: center;
+  width: 350px;
+  /* justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: auto; */
 }
 
 
 .journalbody{
-
+  border: 4mm ridge rgba(211, 220, 50, .6);
+}
+.title{
+  text-align: center;
+  line-height: 10.0;
+  
 }

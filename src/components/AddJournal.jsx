@@ -45,30 +45,30 @@ const AddJournal = () => {
       <Hero />
 
       <section className="journalbody">
-        <h3>How are you feeling?</h3>
+        <p className="title">How are you feeling?</p>
         <div>
           <img
             onClick={() => setFeeling("happy")}
             src={happy}
-            alt="happiness emoji"
+            alt="a sad cartoon of a woman"
             className="emoji"
           />
           <img
             onClick={() => setFeeling("sad")}
             src={sad}
-            alt="sad emoji"
+            alt="a sad cartoon of a woman"
             className="emoji"
           />
           <img
             onClick={() => setFeeling("anxious")}
             src={anxious}
-            alt="anxious emoji"
+            alt="a cartoon of an anxious man"
             className="emoji"
           />
           <img
             onClick={() => setFeeling("overwhelmed")}
             src={overwhelmed}
-            alt="overwhelmed emoji"
+            alt="a cartoon of an overwhelmed man"
             className="emoji"
           />
           {console.log(feeling)}
