@@ -10,6 +10,11 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { initializeApp } from "firebase/app"
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth"
+import { AuthContext } from "../../App";
 // import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 // import app from '../secret/secret.js';
 
