@@ -46,44 +46,47 @@ const AddJournal = () => {
 
       <section className="journalbody">
         <p className="title">How are you feeling?</p>
-        <div>
+        <div className="enlarge">
+        <div className="emoji">
           <img
             onClick={() => setFeeling("happy")}
             src={happy}
             alt="a sad cartoon of a woman"
-            className="emoji"
+            // className="emoji"
           />
           <img
             onClick={() => setFeeling("sad")}
             src={sad}
             alt="a sad cartoon of a woman"
-            className="emoji"
+            // className="emoji"
           />
           <img
             onClick={() => setFeeling("anxious")}
             src={anxious}
             alt="a cartoon of an anxious man"
-            className="emoji"
+            // className="emoji"
           />
           <img
             onClick={() => setFeeling("overwhelmed")}
             src={overwhelmed}
             alt="a cartoon of an overwhelmed man"
-            className="emoji"
+            // className="emoji"
           />
           {console.log(feeling)}
         </div> 
+        </div>
 
-        <FormControl>
-        <FormLabel id="demo-row-radio-buttons-group-label">
+        {/* <FormControl> */}
+        <p  className="talkTo">
           Want to talk about it?
-        </FormLabel>
+        </p>
         <RadioGroup
           row
           aria-labelledby="demo-row-radio-buttons-group-label"
           name="row-radio-buttons-group"
           value={willTalkTo}
           onChange={handleChange}
+          className="radio"
         >
           <FormControlLabel value="No" control={<Radio />} label="No" />
           <FormControlLabel value="to HR" control={<Radio />} label="to Manager" />
@@ -94,8 +97,8 @@ const AddJournal = () => {
           />
           {console.log(willTalkTo)}
         </RadioGroup>
-        </FormControl> 
-        <button
+        {/* </FormControl>  */}
+        <button className="submit"
           type="button"
           variant="contained"
           onClick={() => handleSubmit()}
