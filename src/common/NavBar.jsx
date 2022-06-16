@@ -19,8 +19,8 @@ const  NavBar = () => {
               
             />
           </div>
-          <div className="login">
-          <Button  size="large" variant="outlined" color="inherit">Login</Button>
+          <div className="login-container">
+          <Button clasName="login" size="large" variant="outlined" color="inherit">Login</Button>
           </div>
         </Toolbar>
       </AppBar>
