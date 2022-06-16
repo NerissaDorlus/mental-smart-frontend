@@ -12,12 +12,16 @@ const  NavBar = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
+          <div className="logo1">
           <img
               src={logo1}
               alt="an animated heart and brain holding hands to depict empathy"
-              className="logo1"
+              
             />
-          <Button className="login" size="large" variant="outlined" color="inherit">Login</Button>
+          </div>
+          <div className="login">
+          <Button  size="large" variant="outlined" color="inherit">Login</Button>
+          </div>
         </Toolbar>
       </AppBar>
     </Box>
