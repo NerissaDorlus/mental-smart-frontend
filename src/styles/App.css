@@ -1,9 +1,32 @@
 :root *{
   font-family: 'Roboto', sans-serif;
 }
+.logo{
+  width: 200px;
+}
+.login{
+  justify-content: right;
+}
 .empathy{
   background-color: #1976d2;
 }
+
+.goleman{
+  width: 500px;
+}
+
+.lubetzky{
+  width: 500px;
+}
+
+.nadella{
+  width: 500px;
+}
+
+.cook{
+  width: 500px;
+}
+
 .journalbody{
   border: 2px solid black;
   /* padding: 5px; */
