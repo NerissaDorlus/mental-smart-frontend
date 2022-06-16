@@ -1,6 +1,9 @@
+import "../styles/App.css"
 
 export default function Footer(){
     return(
-        <p> Mental Smart Made With 💕 by Nerissa Dorlus </p>
+        <div className="footer-container">
+        <p className="footer"> Mental Smart Made With 💕 by Nerissa Dorlus </p>
+        </div>
     )
 }

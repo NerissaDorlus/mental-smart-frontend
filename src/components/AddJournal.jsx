@@ -8,9 +8,12 @@ import { useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
+// import FormControl from "@mui/material/FormControl";
+// import FormLabel from "@mui/material/FormLabel";
 import { useNavigate } from "react-router-dom";
+import { Button, Grid } from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
+
 
 const AddJournal = () => {
 
@@ -43,43 +46,40 @@ const AddJournal = () => {
   return (
     <>
       <Hero />
-
       <section className="journalbody">
         <p className="title">How are you feeling?</p>
         <div className="enlarge">
-        <div className="emoji">
-          <img
-            onClick={() => setFeeling("happy")}
-            src={happy}
-            alt="a sad cartoon of a woman"
-            // className="emoji"
-          />
-          <img
-            onClick={() => setFeeling("sad")}
-            src={sad}
-            alt="a sad cartoon of a woman"
-            // className="emoji"
-          />
-          <img
-            onClick={() => setFeeling("anxious")}
-            src={anxious}
-            alt="a cartoon of an anxious man"
-            // className="emoji"
-          />
-          <img
-            onClick={() => setFeeling("overwhelmed")}
-            src={overwhelmed}
-            alt="a cartoon of an overwhelmed man"
-            // className="emoji"
-          />
-          {console.log(feeling)}
-        </div> 
+          <div className="emoji">
+            <img
+              onClick={() => setFeeling("happy")}
+              src={happy}
+              alt="a sad cartoon of a woman"
+              // className="emoji"
+            />
+            <img
+              onClick={() => setFeeling("sad")}
+              src={sad}
+              alt="a sad cartoon of a woman"
+              // className="emoji"
+            />
+            <img
+              onClick={() => setFeeling("anxious")}
+              src={anxious}
+              alt="a cartoon of an anxious man"
+              // className="emoji"
+            />
+            <img
+              onClick={() => setFeeling("overwhelmed")}
+              src={overwhelmed}
+              alt="a cartoon of an overwhelmed man"
+              // className="emoji"
+            />
+            {console.log(feeling)}
+          </div>
         </div>
 
         {/* <FormControl> */}
-        <p  className="talkTo">
-          Want to talk about it?
-        </p>
+        <p className="talkTo">Want to talk about it?</p>
         <RadioGroup
           row
           aria-labelledby="demo-row-radio-buttons-group-label"
@@ -89,7 +89,11 @@ const AddJournal = () => {
           className="radio"
         >
           <FormControlLabel value="No" control={<Radio />} label="No" />
-          <FormControlLabel value="to HR" control={<Radio />} label="to Manager" />
+          <FormControlLabel
+            value="to HR"
+            control={<Radio />}
+            label="to Manager"
+          />
           <FormControlLabel
             value="to HR"
             control={<Radio />}
@@ -98,13 +102,31 @@ const AddJournal = () => {
           {console.log(willTalkTo)}
         </RadioGroup>
         {/* </FormControl>  */}
-        <button className="submit"
+        <Grid container className="submit">
+          <Grid item xs={5}>
+          </Grid>
+          <Grid item xs={2}>
+            {/* <Item> */}
+              <Button
+                onClick={() => handleSubmit()}
+                variant="contained"
+                endIcon={<SendIcon />}
+              >
+                Submit Journal
+              </Button>
+            {/* </Item> */}
+          </Grid>
+          <Grid item xs={5}>
+            {/* <Item>xs=8</Item> */}
+          </Grid>
+        </Grid>
+        {/* <button className="submit"
           type="button"
           variant="contained"
           onClick={() => handleSubmit()}
         >
           Submit Journal
-        </button>
+        </button> */}
       </section>
 
       <Footer />

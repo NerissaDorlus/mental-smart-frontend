@@ -2,7 +2,7 @@ import Journal from "./Journal";
 
 const UserJournals  = ({journals, userEmail}) => {
     return (
-        <>
+        <div className="userjournal">
         <h3>Hi {userEmail}</h3>
 
              {/* <Avatar alt="User name" src="    " /> */}
@@ -13,7 +13,7 @@ const UserJournals  = ({journals, userEmail}) => {
                 })}
 
 
-        </>
+        </div>
     )
 }
 
