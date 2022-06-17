@@ -32,11 +32,12 @@ const TeamView = () => {
     }, []);
      return (
        <>
-         <h1>Team View</h1>
+         <h1 className="team">Team View</h1>
          {!userJournals ? (
            <h2>Loading Journals ...</h2>
          ) : (
-          <Container fixed maxWidth="md">
+
+          <Container className="teams" fixed maxWidth="md">
            <Grid     
            container
            spacing={3}
@@ -47,6 +48,7 @@ const TeamView = () => {
            display="grid"
            flex-wrap="wrap"
            padding={"50px"}
+           className="teamsgrid"
            >
              {Object.keys(userJournals).map((email) => (
                <UserJournals key={email} journals={userJournals[email]} userEmail={email} />
