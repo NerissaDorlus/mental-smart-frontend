@@ -1,0 +1,16 @@
+/* .footer{
+    padding: 68px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+    max-width: 19px;
+    margin: 0 auto;
+} */
+
+
+.footer {
+    font-size: 16px;
+    text-align: center;
+    line-height: 3.0;
+   }

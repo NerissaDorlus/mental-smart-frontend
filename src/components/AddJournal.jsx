@@ -13,6 +13,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import { useNavigate } from "react-router-dom";
 import { Button, Grid } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
+import "../styles/add-journal.css"
 
 
 const AddJournal = () => {
@@ -46,10 +47,10 @@ const AddJournal = () => {
   return (
     <>
       <Hero />
-      <section class="container" className="journalbody">
+      <section className="journalbody">
         <p>How are you feeling?</p>          
-        <div>
-           <div className="enlarge">
+        {/* <div> */}
+           <Grid container className="enlarge">
             <img
               onClick={() => setFeeling("happy")}
               src={happy}
@@ -75,8 +76,8 @@ const AddJournal = () => {
               className="emoji"
             />
             {console.log(feeling)}
-          </div>
-        </div>
+          </Grid>
+        {/* </div> */}
 
         {/* <FormControl> */}
         <p className="talkTo">Want to talk about it?</p>

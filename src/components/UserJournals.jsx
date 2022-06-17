@@ -1,4 +1,5 @@
 import Journal from "./Journal";
+import "../styles/userjournal.css"
 
 const UserJournals  = ({journals, userEmail}) => {
     return (

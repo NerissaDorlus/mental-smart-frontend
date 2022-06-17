@@ -21,13 +21,16 @@ const Landing = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sint officiis, deleniti dolorem fugit commodi laborum sed ratione tempore illo ab earum error iste architecto ea, accusamus similique vel provident?
 
             </Typography>
+            <div>
             <Button
+              className="login-btn"
               variant="contained"
               color="primary"
               sx={{ width: '200px', fontSize: '16px' }}
             >
               Login
             </Button>
+            </div>
           </Grid>
           <Grid item xs={12} md={5}>
             <img src={empathy} alt="group of colleagues comforting a man" className="landing-img" />
