@@ -4,28 +4,23 @@ import { UserContext } from "../context/ContextProvider.jsx";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { Button } from "@mui/material";
-// import { initializeApp } from "firebase/app";
 
-
-const connectAuth = () => {
-    // const app = initializeApp(firebaseConfig);
-    return getAuth(app);
-}
 
 const LoginButton = () => {
     const navigate = useNavigate();
 
-    const {setUser} = useContext(UserContext)
+    const {setUser, setJwt} = useContext(UserContext)
 
+    const handleGoogleLogin = () => {
 
-    function handleGoogleLogin() {
-
-        const auth = connectAuth();
+        const auth = getAuth(app);
         const provider = new GoogleAuthProvider();
 
         signInWithPopup(auth, provider)
         .then((res) => {
             setUser(res.user);
+            const credential = GoogleAuthProvider.credentialFromResult(res);
+            setJwt(credential.accessToken);
             navigate("/add-journal");
         })
         .catch(console.error)

@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Grid } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import "../styles/add-journal.css"
+import config from "../config"
 
 
 const AddJournal = () => {
@@ -23,7 +24,7 @@ const AddJournal = () => {
     setWillTalkTo(e.target.value);
   };
   const handleSubmit = () => {
-    fetch("https://mental-smart.web.app/journals", {
+    fetch(config.apiUrl, {
       method: "POST",
       body: JSON.stringify({
         feeling,

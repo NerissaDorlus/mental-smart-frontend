@@ -1,5 +1,5 @@
 import Journal from "./Journal";
-import "../styles/userjournal.css"
+import "../styles/user-journal.css"
 
 
 
