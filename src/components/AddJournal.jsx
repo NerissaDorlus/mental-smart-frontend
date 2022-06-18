@@ -8,8 +8,6 @@ import { useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-// import FormControl from "@mui/material/FormControl";
-// import FormLabel from "@mui/material/FormLabel";
 import { useNavigate } from "react-router-dom";
 import { Button, Grid } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
@@ -77,9 +75,7 @@ const AddJournal = () => {
             />
             {console.log(feeling)}
           </Grid>
-        {/* </div> */}
 
-        {/* <FormControl> */}
         <p className="talkTo">Want to talk about it?</p>
         <RadioGroup
           row
@@ -91,23 +87,21 @@ const AddJournal = () => {
         >
           <FormControlLabel value="No" control={<Radio />} label="No" />
           <FormControlLabel
-            value="to HR"
+            value="to Manager"
             control={<Radio />}
             label="to Manager"
           />
           <FormControlLabel
             value="to HR"
             control={<Radio />}
-            label="to Manager"
+            label="to HR"
           />
           {console.log(willTalkTo)}
         </RadioGroup>
-        {/* </FormControl>  */}
         <Grid container className="submit">
           <Grid item xs={5}>
           </Grid>
           <Grid item xs={2}>
-            {/* <Item> */}
               <Button
                 onClick={() => handleSubmit()}
                 variant="contained"
@@ -115,7 +109,6 @@ const AddJournal = () => {
               >
                 Submit Journal
               </Button>
-            {/* </Item> */}
           </Grid>
           <Grid item xs={5}>
             {/* <Item>xs=8</Item> */}

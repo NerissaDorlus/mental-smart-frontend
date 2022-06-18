@@ -5,26 +5,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import SignUp from "./components/SignUp";
 import AddJournal from "./components/AddJournal";
 import TeamView from "./components/TeamView";
-import Landing from "./components/Landing"
-
-// import UserContextProvider from "./context/contextProvider";
+import Landing from "./components/Landing";
+import UserContextProvider from "./context/ContextProvider";
 
 function App() {
   return (
-    <>
-    
-    <BrowserRouter>
-    {/* <UserContextProvider> */}
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        {/* <Route path="/signup" element={<SignUp />} /> */}
-        <Route path="/add-journal" element={<AddJournal />} />
-        <Route path="/team" element={<TeamView />} />
-      </Routes>
-      {/* </UserContextProvider> */}
-    </BrowserRouter>
-    
- </> 
- );
+    <UserContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/add-journal" element={<AddJournal />} />
+          <Route path="/team" element={<TeamView />} />
+        </Routes>
+      </BrowserRouter>
+    </UserContextProvider>
+  );
 }
 export default App;

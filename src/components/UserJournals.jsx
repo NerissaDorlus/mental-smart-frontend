@@ -1,6 +1,10 @@
 import Journal from "./Journal";
 import "../styles/userjournal.css"
 
+
+
+
+
 const UserJournals  = ({journals, userEmail}) => {
     return (
         <div className="userjournal">
@@ -12,8 +16,6 @@ const UserJournals  = ({journals, userEmail}) => {
                     return <Journal key={journal.id} journal={journal}/>
 
                 })}
-
-
         </div>
     )
 }

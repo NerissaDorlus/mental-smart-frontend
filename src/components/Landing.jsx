@@ -1,9 +1,11 @@
-import { Button, Grid, Typography } from "@mui/material";
+import {Grid, Typography } from "@mui/material";
 import  empathy from "../assets/empathy.png"
 import { Box } from "@mui/system";
 import Footer from "../common/Footer";
 import logo1 from "../assets/logo1.png"
 import "../styles/landing.css"
+import LoginButton from "../components/LoginButton";
+
 
 const Landing = () => {
   
@@ -22,14 +24,15 @@ const Landing = () => {
 
             </Typography>
             <div>
-            <Button
+            <LoginButton />
+            {/* <Button
               className="login-btn"
               variant="contained"
               color="primary"
               sx={{ width: '200px', fontSize: '16px' }}
             >
               Login
-            </Button>
+            </Button> */}
             </div>
           </Grid>
           <Grid item xs={12} md={5}>

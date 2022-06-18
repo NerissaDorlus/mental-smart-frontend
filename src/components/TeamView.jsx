@@ -58,10 +58,6 @@ const TeamView = () => {
            </Container>
          )}
                <Button variant="contained" onClick={() => navigate("/add-journal")}>Return to journal</Button>
-
-          {/* <button type="button" variant="contained" onClick={() => navigate("/add-journal")}>
-        Add Journal
-      </button>     */}
       <Footer  />
        </>
      );
