@@ -10,38 +10,38 @@ import LoginButton from "../components/LoginButton";
 const Landing = () => {
   
     return (
-    <div>
-       <img src={logo1} alt="cartoon brain and heart holding hands" className="logo" />
-      <Box className="landing">
+      <>
+        <img
+          src={logo1}
+          alt="cartoon brain and heart holding hands"
+          className="logo"
+        />
+        <Box className="landing">
+          <Grid container spacing={6} className="gridContainer">
+            <Grid item justifyContent="space-around" xs={12} md={7} mt={4}>
+              <Typography variant="h3" className="landingtitle">
+                Building Workplace Empathy
+              </Typography>
+              <Typography mt={4} mb={4} variant="h6" className="landingsub">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
+                sint officiis, deleniti dolorem fugit commodi laborum sed
+                ratione tempore illo ab earum error iste architecto ea,
+                accusamus similique vel provident?
+              </Typography>
 
-        <Grid container spacing={6} className="gridContainer">
-          <Grid item xs={12} md={7}>
-            <Typography variant="h3" className="landingtitle">
-              Building Workplace Empathy
-            </Typography>
-            <Typography variant="h6" className="landingsub">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sint officiis, deleniti dolorem fugit commodi laborum sed ratione tempore illo ab earum error iste architecto ea, accusamus similique vel provident?
-
-            </Typography>
-            <div>
-            <LoginButton />
-            {/* <Button
-              className="login-btn"
-              variant="contained"
-              color="primary"
-              sx={{ width: '200px', fontSize: '16px' }}
-            >
-              Login
-            </Button> */}
-            </div>
+              <LoginButton />
+            </Grid>
+            <Grid item xs={12} md={5}>
+              <img
+                src={empathy}
+                alt="group of colleagues comforting a man"
+                className="landing-img"
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={5}>
-            <img src={empathy} alt="group of colleagues comforting a man" className="landing-img" />
-          </Grid>
-        </Grid>
-      </Box>
-      <Footer />
-      </div>
+        </Box>
+        <Footer />
+      </>
     );
   };
   
