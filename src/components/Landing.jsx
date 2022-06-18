@@ -17,7 +17,7 @@ const Landing = () => {
         <Grid container spacing={6} className="gridContainer">
           <Grid item xs={12} md={7}>
             <Typography variant="h3" className="landingtitle">
-              Let's build empathy in the workplace together
+              Building Workplace Empathy
             </Typography>
             <Typography variant="h6" className="landingsub">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sint officiis, deleniti dolorem fugit commodi laborum sed ratione tempore illo ab earum error iste architecto ea, accusamus similique vel provident?

@@ -8,17 +8,19 @@
     margin-top: 150px;
     margin-bottom: 200px;
   }
-  
+  /* .langtitle{
+
+  } */
   .landingsub{
-    inline-size: 500px;
+    inline-size: 700px;
     overflow-wrap: break-word; 
     margin-bottom: 50px;
   }
     
   .landing-img{
-    width: 600px;
+    width: 650px;
   }
-  .landing-btn{
+  /* .landing-btn{
     margin-top: 30px;
-  }
+  } */
 

@@ -35,6 +35,7 @@ const TeamView = () => {
        <>
          <h1 className="team-title">Team View</h1>
          {!userJournals ? (
+          // <Loading />
            <h2>Loading Journals ...</h2>
          ) : (
 

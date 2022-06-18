@@ -1,8 +1,6 @@
 import "./styles/App.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Login from "./components/Login";
-// import SignUp from "./components/SignUp";
 import AddJournal from "./components/AddJournal";
 import TeamView from "./components/TeamView";
 import Landing from "./components/Landing";

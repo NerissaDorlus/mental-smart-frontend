@@ -33,10 +33,11 @@ const LoginButton = () => {
 
     return(
 
-        <Button variant="contained" onClick={handleGoogleLogin} >Google Login</Button>
-
+        <Button 
+        className="login-button"
+        variant="contained" 
+        onClick={handleGoogleLogin}>Google Login</Button>
     )
-
 }
 
 export default LoginButton;
