@@ -18,9 +18,14 @@ const LoginButton = () => {
 
         signInWithPopup(auth, provider)
         .then((res) => {
-            setUser(res.user);
+
+            const {displayName, email} =  res.user
+            setUser({ displayName, email });
             const credential = GoogleAuthProvider.credentialFromResult(res);
-            setJwt(credential.accessToken);
+            setJwt(credential.idToken);
+            console.log("Creds", credential)
+            console.log("user", res)
+
             navigate("/add-journal");
         })
         .catch(console.error)

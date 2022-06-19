@@ -48,18 +48,6 @@ const TeamView = () => {
          ) : (
 
           <Container className="team-display" fixed maxWidth="md">
-           {/* <Grid     
-           container
-          //  spacing={3}
-          //  alignContent={"center"}
-           gridTemplateColumns="repeat(3, 2fr)"
-           gap="100px"
-          //  maxWidth="500px"
-           display="grid"
-           flex-wrap="wrap"
-          //  padding={"50px"}
-           className="teams-grid"
-           > */}
              {Object.keys(userJournals).map((email) => (
                <UserJournals key={email} journals={userJournals[email]} userEmail={email} />
              ))}

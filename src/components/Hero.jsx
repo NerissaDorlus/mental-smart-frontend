@@ -1,13 +1,16 @@
 import React from "react"
+import { useContext } from "react"
+import  {UserContext} from "../context/ContextProvider"
+
 
 
 
 
 const Hero = () =>{
-    //Fake  data to be  removed
-    const name  =  "Elie-Skye"
+    const { user } = useContext(UserContext);
+
     return (
-        <h1>Welcome, {name}</h1>
+        <h1>Welcome, {user.displayName}</h1>
     )
 }
 

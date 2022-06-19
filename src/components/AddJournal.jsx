@@ -4,7 +4,7 @@ import sad from "../assets/sad.png";
 import anxious from "../assets/anxious.png";
 import Hero from "./Hero"
 import Footer from "../common/Footer"
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -13,6 +13,7 @@ import { Button, Grid } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import "../styles/add-journal.css"
 import config from "../config"
+import { UserContext } from "../context/ContextProvider";
 
 
 const AddJournal = () => {
@@ -20,6 +21,8 @@ const AddJournal = () => {
   const [feeling, setFeeling] = useState("");
   const [willTalkTo, setWillTalkTo] = useState("");
   const navigate = useNavigate()
+  const { jwt } = useContext(UserContext);
+
   const handleChange = (e) => {
     setWillTalkTo(e.target.value);
   };
@@ -34,6 +37,7 @@ const AddJournal = () => {
       }),
       headers: {
         "Content-type": "application/json",
+        Authorization: jwt
       },
     })
       .then((res) => {
