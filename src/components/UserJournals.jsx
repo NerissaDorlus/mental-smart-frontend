@@ -5,12 +5,13 @@ import "../styles/user-journal.css"
 
 
 
-const UserJournals  = ({journals, userEmail}) => {
+
+const UserJournals  = ({journals, userEmail, userName}) => {
     return (
         <div className="userjournal">
-        <h3>Hi {userEmail}</h3>
+        <h3>Team Member: { userName}</h3>
 
-             {/* <Avatar alt="User name" src="    " /> */}
+             {/* <Avatar alt="Users name" src="    " /> */}
              
                   {journals.map((journal) => {
                     return <Journal key={journal.id} journal={journal}/>

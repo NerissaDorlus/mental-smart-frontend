@@ -26,7 +26,8 @@ const TeamView = () => {
 
             
             const emailJournalMap = {}
-            newJournals.forEach(journal => {             
+            newJournals.forEach(journal => {   
+              //creating list of journals by user          
 
                 if(!emailJournalMap[journal.email]){
                     emailJournalMap[journal.email] = []
@@ -49,7 +50,7 @@ const TeamView = () => {
 
           <Container className="team-display" fixed maxWidth="md">
              {Object.keys(userJournals).map((email) => (
-               <UserJournals key={email} journals={userJournals[email]} userEmail={email} />
+               <UserJournals key={email} journals={userJournals[email]} userName={userJournals[email][0].displayName} userEmail={email} />
              ))}
            {/* </Grid> */}
            </Container>

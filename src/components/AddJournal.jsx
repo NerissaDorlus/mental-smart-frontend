@@ -21,7 +21,7 @@ const AddJournal = () => {
   const [feeling, setFeeling] = useState("");
   const [willTalkTo, setWillTalkTo] = useState("");
   const navigate = useNavigate()
-  const { jwt } = useContext(UserContext);
+  const { jwt, user } = useContext(UserContext);
 
   const handleChange = (e) => {
     setWillTalkTo(e.target.value);
@@ -32,8 +32,8 @@ const AddJournal = () => {
       body: JSON.stringify({
         feeling,
         willTalkTo,
-        // inputedEmail: "email goes here"
-      
+        userName: user.displayName,
+        inputedEmail: user.email,     
       }),
       headers: {
         "Content-type": "application/json",

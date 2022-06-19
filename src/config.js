@@ -1,4 +1,4 @@
 export default {
     // apiUrl: "https://mental-smart.web.app/journals"
-    apiUrl: "http://localhost:3030/jourrnals"
+    apiUrl: "http://localhost:3030/journals"
 }
