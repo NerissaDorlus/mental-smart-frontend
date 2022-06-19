@@ -1,6 +1,8 @@
 
   
   .userjournal{
+    width: 200px;
+    min-height: 200px;
     border: 2px solid black;
     border-radius: 25px;
     padding: 75px; 
