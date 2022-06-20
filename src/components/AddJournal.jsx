@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Container, Grid } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import "../styles/add-journal.css"
-import config from "../config"
+import {config} from "../config"
 import { UserContext } from "../context/ContextProvider";
 
 
@@ -60,7 +60,6 @@ const AddJournal = () => {
       <Hero />
       <section className="journalbody">
         <p>How are you feeling?</p>          
-        {/* <div> */}
            <Grid container className="enlarge">
             <img
               onClick={() => setFeeling("happy")}

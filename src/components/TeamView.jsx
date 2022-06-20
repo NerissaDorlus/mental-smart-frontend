@@ -5,7 +5,7 @@ import Footer from "../common/Footer";
 import { Button, Grid} from "@mui/material";
 // import { Container } from "@mui/system";
 import "../styles/team.css"
-import config from "../config"
+import {config} from "../config"
 import  {UserContext} from "../context/ContextProvider"
 import { Container } from "@mui/system";
 
