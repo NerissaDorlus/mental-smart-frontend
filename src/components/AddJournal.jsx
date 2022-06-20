@@ -4,12 +4,12 @@ import sad from "../assets/sad.png";
 import anxious from "../assets/anxious.png";
 import Hero from "./Hero"
 import Footer from "../common/Footer"
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useNavigate } from "react-router-dom";
-import { Button, Grid } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import "../styles/add-journal.css"
 import config from "../config"
@@ -19,9 +19,16 @@ import { UserContext } from "../context/ContextProvider";
 const AddJournal = () => {
 
   const [feeling, setFeeling] = useState("");
+  const [selectedFeeling, setSelectedFeeling] = useState({});
   const [willTalkTo, setWillTalkTo] = useState("");
   const navigate = useNavigate()
   const { jwt, user } = useContext(UserContext);
+
+  useEffect(()  => {
+    const background = {}
+    background[feeling] = true;
+    setSelectedFeeling(background);
+  }, [feeling])
 
   const handleChange = (e) => {
     setWillTalkTo(e.target.value);
@@ -46,9 +53,10 @@ const AddJournal = () => {
         navigate("/team")
       })
       .catch(console.error);
+      
   };
   return (
-    <>
+    <Container>
       <Hero />
       <section className="journalbody">
         <p>How are you feeling?</p>          
@@ -58,27 +66,26 @@ const AddJournal = () => {
               onClick={() => setFeeling("happy")}
               src={happy}
               alt="a sad cartoon of a woman"
-              className="emoji"
+              className={selectedFeeling["happy"] ? "emoji selected-feeling"  : "emoji" }
             />
             <img
               onClick={() => setFeeling("sad")}
               src={sad}
               alt="a sad cartoon of a woman"
-              className="emoji"
+              className={selectedFeeling["sad"] ? "emoji selected-feeling" : "emoji"}
             />
             <img
               onClick={() => setFeeling("anxious")}
               src={anxious}
               alt="a cartoon of an anxious man"
-              className="emoji"
+              className={selectedFeeling["anxious"] ? "emoji selected-feeling" : "emoji"}
             />
             <img
               onClick={() => setFeeling("overwhelmed")}
               src={overwhelmed}
               alt="a cartoon of an overwhelmed man"
-              className="emoji"
+              className={selectedFeeling["overwhelmed"] ? "emoji selected-feeling" : "emoji"}
             />
-            {console.log(feeling)}
           </Grid>
 
         <p className="talkTo">Want to talk about it?</p>
@@ -101,7 +108,6 @@ const AddJournal = () => {
             control={<Radio />}
             label="to HR"
           />
-          {console.log(willTalkTo)}
         </RadioGroup>
         <Grid container className="submit">
           <Grid item xs={5}>
@@ -119,19 +125,12 @@ const AddJournal = () => {
             {/* <Item>xs=8</Item> */}
           </Grid>
         </Grid>
-        {/* <button className="submit"
-          type="button"
-          variant="contained"
-          onClick={() => handleSubmit()}
-        >
-          Submit Journal
-        </button> */}
+        
       </section>
 
       <Footer />
 
-      {/* <Journal props={feeling} ></Journal> */}
-    </>
+    </Container>
   );
 };
 

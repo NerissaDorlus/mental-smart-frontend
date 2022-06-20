@@ -39,5 +39,10 @@
   
   .submit{
     align-content: center;
-    
+  }
+
+  .selected-feeling{
+    background-color: coral;
+    border: 15px solid coral;
+    border-radius: 50px;
   }

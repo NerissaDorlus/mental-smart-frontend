@@ -23,8 +23,7 @@ const LoginButton = () => {
             setUser({ displayName, email });
             const credential = GoogleAuthProvider.credentialFromResult(res);
             setJwt(credential.idToken);
-            console.log("Creds", credential)
-            console.log("user", res)
+            
 
             navigate("/add-journal");
         })

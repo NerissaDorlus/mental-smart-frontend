@@ -1,6 +1,6 @@
 const Journal = ({journal}) => {
     const journalEmoji = {
-        anxious: "😬",
+        anxious: "😬", 
         happy: "😃",
         sad: "😔", 
         overwhelmed: "🤯"
