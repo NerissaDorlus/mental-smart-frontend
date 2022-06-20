@@ -34,7 +34,7 @@ const AddJournal = () => {
     setWillTalkTo(e.target.value);
   };
   const handleSubmit = () => {
-    fetch(config.apiUrl, {
+    fetch("config.apiUrl", {
       method: "POST",
       body: JSON.stringify({
         feeling,
@@ -107,6 +107,11 @@ const AddJournal = () => {
             value="to HR"
             control={<Radio />}
             label="to HR"
+          />
+          <FormControlLabel
+            value="to Counselor"
+            control={<Radio />}
+            label="to Counselor"
           />
         </RadioGroup>
         <Grid container className="submit">
