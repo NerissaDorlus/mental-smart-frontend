@@ -23,10 +23,9 @@ const Landing = () => {
                 Building Workplace Empathy
               </Typography>
               <Typography mt={4} mb={4} variant="h6" className="landingsub">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-                sint officiis, deleniti dolorem fugit commodi laborum sed
-                ratione tempore illo ab earum error iste architecto ea,
-                accusamus similique vel provident?
+              About 50% of people who felt empathy from their team were less likely to leave their workplace. 
+              Let's normalize empathy!
+
               </Typography>
 
               <LoginButton />
